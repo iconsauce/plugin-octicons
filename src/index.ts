@@ -1,4 +1,4 @@
-import { dirname } from 'path'
+import { resolve, join } from 'path'
 import { IconsaucePlugin } from '@iconsauce/plugin'
 
 const octiconPlugin: IconsaucePlugin = {
@@ -8,7 +8,7 @@ const octiconPlugin: IconsaucePlugin = {
     lib: /([a-zA-Z_\-/]+\/([0-9a-zA-Z_-]+)-(12|16|24)\.svg)/,
   },
   selector: (libPath: RegExpMatchArray) => `oct/${libPath[3]}/${libPath[2].replace(/[_]+/g, '-')}`,
-  path: `${dirname(require.resolve('@primer/octicons/package.json'))}/build/svg/**/*.svg`,
+  path: `${resolve(join('node_modules', '@primer/octicons'))}/build/svg/**/*.svg`,
 }
 
 export default octiconPlugin
