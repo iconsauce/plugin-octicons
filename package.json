@@ -1,6 +1,6 @@
 {
   "name": "@iconsauce/octicons",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "An iconsauce plugin to gather octicons SVG icons pack",
   "main": "lib/index.js",
   "scripts": {
